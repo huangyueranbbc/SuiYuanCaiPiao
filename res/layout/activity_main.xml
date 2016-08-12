@@ -2,15 +2,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.suiyuancaipiao.MainActivity" >
+    tools:context=".MainActivity" >
 
-    <TextView
+    <!-- 界面分为三部分 -->
+
+
+    <!-- 标题 -->
+
+    <include
+        android:id="@+id/title_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        layout="@layout/title_layout" />
+
+    <!-- 底部导航 -->
+
+    <include
+        android:id="@+id/bottom_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_layout" />
+
+    <!-- 中间容器 -->
+
+    <RelativeLayout
+        android:id="@+id/middle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/title_layout"
+        android:background="@color/white" >
+    </RelativeLayout>
 
 </RelativeLayout>

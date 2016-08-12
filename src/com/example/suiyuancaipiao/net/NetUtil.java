@@ -25,7 +25,7 @@ public class NetUtil
 		if (isMOBILE)
 		{
 			// APN被选中,的代理信息是否有内容，如果有wap方式
-			readAPN(context);// 判断是哪个APN被选中了
+//			readAPN(context);// 判断是哪个APN被选中了
 		}
 
 		if (!isWIFI && !isMOBILE)
